@@ -1,0 +1,320 @@
+@charset "UTF-8";
+@font-face { /*serve para colocar fontes personalizadas no nosso site*/
+	
+		font-family: 'FonteLogo'; /*entre aspas simplemos temos a opção de colocar um nome para a fonte que iremos inserir, assim podemos chama-lá*/
+		src: url("../_fonts/bubblegum-sans-regular.otf");/*esse é o endereço da nossa fonte*/
+}		
+		body{
+			
+		font-family: arial, sans-serif;	
+		background-color: #dddddd;
+		color: rgba(0,0,0,1);
+			
+		}
+		
+		header#cabecalho {
+			
+			border-bottom: 1px #606060 solid; /*serve para configurar a borda de baixo,  o primeiro parâmetro é a largura da borda em px, o segundo é a cor da borda, e o terceiro é o formato da borda, */
+			height: 150px;/*serve para mexer na altura do cabeçalho*/
+			background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;/*serve para colocar uma imagem no css com um tag dentro de uma div ou qualquer outro conteiner], os dois pontos servem para voltar uma pagina e o barra serve para colocar uma pasta que é a _imagens e o nome glass-logo-peq é o nome da imagem, o no-repeat serve para não repitir o logo varias vezes dentro do header o 0px serve para deslocamento lateral e o 100px serve para o deslocamento vertical*/
+		}
+		
+		header#cabecalho h1{
+			
+			font-family: 'FonteLogo', sans-serif;
+			font-size: 30px;
+			color: #606060;
+			text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+			pedding: 0px;
+			margin-bottom: 0px; /* serve para regular a margem de baixo*/
+		}
+		
+			header#cabecalho h2{
+			
+			font-family: arial, sans-serif;
+			font-size: 13pt;
+			color: #888888;
+			pedding: 0px;
+			margin-top: 0px; /* serve para regular a margem de cima*/
+		}
+		
+		
+		img#icone{
+			position: absolute; /*serve para que a imagem óculos fique em posição absoluta para podemos move-lo na pagina*/
+			left:900px; /*serve para ajustar o óculos para direita e para esquerda*/
+			top:40px; /*serve para ajustar o óculos para cima e para baixo*/
+			
+		}
+		
+		p{
+		text-align: justify;
+			text-indent: 50px;
+		}
+		
+		a{
+			
+			color: #606060;
+			text-decoration: none;/*serve para editar os linkes do texto*/
+		}
+		
+		a:hover{
+			
+				text-decoration: underline;
+		}
+		
+		div#interface{
+			width: 900px;
+			background-color: #ffffff;
+			margin: -20px auto 0px auto; /*serve para ajustar a margem as ordem são (cima, direita,baixo,esquerda) o auto serve para que você deixe o navegador decidir a margem para você assim diminuindo ou almentando o site ele ficara responcivo*/
+			box-shadow: 0px 0px 10px black;/*cria uma sombra atrás da pagina*/
+			padding: 10px 10px 10px 10px;/*serve para desencostar o texto da borda da pagina*/
+		}
+		
+		/*Formatação de imagens com legendas*/
+figure.foto-legenda{
+	
+		position: relative;/*possição relativa quer disser que o código ficara bem no lugar onde ele foi colocado no html*/
+		border:1px solid white; 
+		box-shadow: 1px 1px 4px black;
+		
+	
+	
+}
+
+figure.foto-legenda img {
+		
+		width:100%;
+		height:100%;
+		
+} 
+
+figure.foto-legenda figcaption {
+		
+		 opacity:0;/*faz a legenda e o sombreamento sumir de cima da imagem*/
+		 /*O figcaption é filho do figure, tem que colocar o figure em position ralative se não alegenda da imagem vai para lá em cima do site*/
+		position: absolute; /*posição absoluta dentro do conteiner ou classe mãe*/
+		top:0px; /*indica uma posição acima do elemento*/
+		background-color:rgba(0,0,0,0.4); /*sombreamento dentro da imagem*/
+		color: white; /*cor da letra dentro da imagem*/
+		width: 100%; /*tendo width e o height 100% fara o sombreamento combrir por completa a imagem */
+		height: 100%;
+		padding: 10px/*padding serve para criar um espaço entre a sombra e a imagem.*/
+		box-sizing: border-box;/*box-sizzing: border-box; serve para criar um box dentro da borda.*/
+		transition: opacity 1s; /* serve para colocar um tempo para quando o usuário passar o mouse que nesse caso é de um segundo, é necessário ter o padding e o box-sizing: boder-box para que ele funcione*/
+}
+
+figure.foto-legenda:hover figcaption {/*serve para dar um efeito de sobre posição*/
+	
+		opacity:1;/*faz a legenda aparecer*/
+	
+}
+
+/*FORMATAÇÃO DO MENU */
+
+nav#menu{
+	
+		display:block; /*Serve para que o bloco flutui na tela e podemos colocar onde quiser na tela*/
+		
+}
+
+nav#menu ol{
+	
+		list-style: none; /*Serve para tira o estilo da ul ou seja tirá os pontos pretos de marcação*/
+		text-transform: uppercase; /*serve para trocar de text´transform para uppercase que serve para deixar as letras em maiúscula*/
+		position: absolute; /*tendo uma posição absoluta a caixa podera passar por cima dos outros elementos*/
+		top: -20px;/*aqui ajustamos a altura*/
+		left:400px;/*Aqui ajustamos para os lados*/
+		
+}
+
+nav#menu li{
+	
+	display: inline-block;/*serve para colocar um bloco do lado do outro*/
+	background-color: #dddddd;/*a cor das caizas seram cinza claro*/
+	padding: 10px; /**serve para dar espaçamento entre as caixas, controla o espaço dentro do objeto*/
+	margin:2px; /*Controla o espaço fora da caixa*/
+	transition:background-color 1s; /*serve para fazer a transição no momento que passar o mouse em cima ele ficara escuro mas demorará 1 segundo*/
+}
+
+nav#menu h1{
+		
+		display: none; /*Serve para esconder o nome menu principal*/
+}
+
+nav#menu li:hover{
+	background-color: #606060;/*quando passar o moise por cima dos nomes do menu ele ficaram levemente escurecido*/
+}
+
+nav#menu a{
+	
+	color: #000000; /*serve para colocar a cor da palavra em preto*/
+	text-decoration: none; /*serve para tira a linha de baixo da palvra*/
+	
+}
+
+nav#menu a:hover{
+	
+	color:#ffffff;
+	text-decoration: underline;	/*o link mudara de cor quando o mouse estiver em cima dele*/
+	
+	
+}
+
+section#corpo{
+	
+	display: block;/*display bloco serve para que seja mostrado como bloco*/
+	width: 500px;/*tamanho do bloco será de 600px*/
+	float: left;/*Fara meu bloco flutuar para a esquerda*/
+	border-right: 1px solid #606060 ; /*o border-rigth serve para colocar bodar apenas a direita, os parâmetros que vem após o ponto e virgula são, o primeiro é o tamanho da borda o segundo o tipo da borda e o terceiro a cor da borda*/
+	padding-right: 15px; /*serve para dar um espaçamento entrea a borda e o texto*/
+}
+
+	article#noticia-principal h2{
+		
+		font-size: 12px; /* toda essa edição serve para fazer a edição de todos os H2 que estão dentro do article*/
+		color: #606060;
+		background-color: #dddddd;
+		padding: 5px 0px 5px 10px;
+		margin: 10px 0px 10px 0px;
+		
+	}
+
+	
+	header#cabecalho-artigo h1{
+
+		font-family: 'FonteLogo', sans-serif; /* Essa edição serve para o h1 dentro do header que está dentro do article*/
+		font-size: 20px;
+		color: #606060;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+     header#cabecalho-artigo h2{
+		
+		font-size: 13px;
+		color: #cecece;
+		background-color: #ffffff;
+		margin: 0px;
+		
+	}
+	
+	.direita{
+		
+		text-align: right;
+	}
+	
+	
+	header#cabecalho-artigo h3{
+		
+		font-size: 12px;
+		color: #606060;
+		
+	}
+
+
+
+
+
+
+table#tabelaspec{
+	
+	border: 1px solid #606060;/*borda externa da tabela*/
+	border-spacing: 0px;/*serve para tirar o espaçamentos entre as bordas internas e a externa*/
+	margin-left: auto; /*os dois margem serve para deixa a tabela centralizada*/
+	margin-right: auto; /*deixa a tabela centralizada*/
+}
+
+table#tabelaspec td{
+	
+		border: 1px solid #606060;/*bordas das td's ou seja as bordas interna*/
+		padding: 10px; /*serve para dar esepaçamento entre as cédulas*/
+}
+
+table#tabelaspec td.ce{/*.ce -- o ponto serve para referênciar a classa e o ice é o nome da classe -- Essa é a formatação do lado esquerdo*/
+	
+	color: white;
+	background-color: #606060;
+	vertical-align: top; /*serve para ajutar o texto dentro da tabela*/
+	font-weight: bold; /*serve para deixar a letra mais forte ou grossa*/
+	
+}
+
+table#tabelaspec caption{
+	
+	color: #888888;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+	
+	display: block;/*será mostrado como bloco flutuante ou seja ele irá se desconectar do texto*/
+	float: right; /*Tera uma flutuação a direita*/
+	color:#000000; /*cor da letra*/
+	font-size: 12px; /*Tamanho da letra*/
+	margin-top: 10px;/*Aumentou a borda de cima para que a palavra encostasse na tabela*/	
+}
+
+table#tabelaspec td.cd{/*Essa é a formatação do lado direito*/
+		background-color: #cecece;
+		
+}
+
+aside#lateral{
+	
+	
+	background-color: #dddddd; /*cor do fundo*/
+	display:block; /*para colocar o conteudo num bloco*/
+	width:350px;
+	float: right;/*Fara meu bloco flutuar para a direita, mas para flutuar os objetos tem que está contidos em blocos*/
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1{
+	
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20px;
+	color: #606060;
+	margin-top: 0px;
+	
+}
+
+aside#lateral h2{
+	
+	background-color: #606060;
+	font-size: 13px;
+	color: #ffffff;
+	padding: 5px;
+}
+
+footer#rodape{
+	
+	clear: both; /*serve para limpar a configuração do roda pé dos dois lados*/
+	border-top:1px solid #606060; /*serve para que o roda pé tenha borda na de cima*/
+}
+
+footer#rodape{
+	
+	clear: both; /*serve para limpar a configuração do roda pé dos dois lados*/
+	border-top:1px solid #606060; /*serve para que o roda pé tenha borda na de cima*/
+}
+
+footer#rodape p {
+
+	text-align: center; /*ira centralizar o paragráfo dentro do meu rodapé*/
+	
+}
+
+video#tv2 {
+	
+	display: block;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 350px
+}
+
+
+

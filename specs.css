@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+section#conteudo{
+	
+	width: 1000px; /*Tudo que tiver dentro de conteudo terá largura de 1000px e margin auto*/
+	margin: auto;
+}
+
+iframe#frame-spec{
+	
+	width: 380px;/*o iframe tera altura de 400px, largura de 280px e não terá borda */
+	height: 280px;
+	border: none;
+	/*Serve para que não aconteça a rolagem do iframe*/
+}
+
+iframe#frame-spec::-webkit-crollbar {
+	display: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head lang="pt-br">
+
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="_css/multi-midia.css"/>
+	<link rel="stylesheet" type="text/css" href="_css/media.css"/>
+	
+</head>
+<script language="javascript" src="_javascript/funcoes.js"></script> <!-- serve para chamar o arquirvo script, language refêrencia a linguagem usada o src serve para chamar o arquirvo-->
+<body>
+		<div id="interface">
+	
+		<header id="cabecalho">
+		<hgroup>
+		<h1>Google Glass</h1>
+		<h2>A revolução do Google está chegando</h2>
+		</hgroup>
+		<img id="icone" src="_imagens/glass-oculos-preto-peq.png"/><!-- foi feito um id para que possamos editar essa imagem com css, o id serve para chamar a tag -->
+	
+	
+	
+<nav id= menu>
+		<h1>Menu Principal</h1>
+		<ol>		
+		<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li> <!--o onmouseover serve para mudar a imagem assim que o mouse for passado em cima da tecla home, o onmouseout serve para que quando o mouse sair de cima do botão home a imagem do óculos volte-->
+		
+		<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+		
+		<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+		<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+		<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+		</ol>
+</nav>
+</header>
+<div id="tv-radio"><!--essa tag serve para colocarvídeos e áudio -->
+
+		<audio id="musica" controls="controls">
+			<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+			Descupe, mas não foi possível reproduzir o áudio<!--Essa mensagem aparacera caso o naegador não seja compativo para mostrar esse tipo de recurso, como por exemplo nos casos em que o navegador esteja desatualizado para essa versão-->
+			<!--source significa origem e ela serve para chamar o arquivor de áudio, type="audio/mepeg" é uma type serve para indicar o tipo de arquivo-->
+		</audio>
+		
+		<video id="filme" controls="controls" poster="_imagens/video-mini03.jpg"> <!--O método poster serve para colocar uma imagem como poster do video pra que quando o vídeo ainda não foi iniciado não fiquei com a tela preta-->
+		<source src="_media/getting-started.mp4"type="video/mp4"/>
+		Descupe, mas não foi possível reproduzir o vídeo
+		<!--source significa origem e ela serve para chamar o arquivor de vídeo, type="video/mp4"  é uma type serve para indicar o tipo de arquivo-->
+		
+		</video>
+</div>
+
+<footer id="rodape"> <!-- serve para colocar rodapé--> 
+<p>Copyright &copy; 2020- by Josué Medeiros</br> <!--o barra br serve para dar um espaçamento entre os nomes e o &copy; dara uma c numa esfera como marcação-->
+<a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a> |
+ <a href="http://twitter.com/cursoemvideo" target="blank">Twitter</a></p>
+
+</footer>
+</div>
+</body>
+</html>

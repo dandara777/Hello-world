@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head lang="pt-br">
+
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="_css/conosco.css">
+	<link rel="stylesheet" type="text/css" href="_css/form.css"/>
+	<script language="javascript" src="_javascript/funcoes.js"></script> <!-- serve para chamar o arquirvo script, language refêrencia a linguagem usada o src serve para chamar o arquirvo-->
+	<script>
+		function calc_total(){
+			var qtd = parseInt(document.getElementById('cQtd').value); <!--Var é o tipo da variável qtd é o nome da variável do function parseInt significa transforma em inteiros, document documente, get significa pegar, element significa elemento, by significa por, id o nome dado a nossa variável by id é pegar pelo id, cQtd é a nossa variável usada em quantidade, .value significa .valor-->
+			tot = qtd * 1500;
+			document.getElementById('cTot').value = tot; <!--o tot é igual a qtd * 1500, será pego o cTot que terá de tot, a função calc_total será chamada sempre que escreverem no formulário-->
+			
+		
+		}
+	
+	
+	</script>
+	
+	
+</head>
+
+<body>
+		<div id="interface">
+	
+		<header id="cabecalho">
+		<hgroup>
+		<h1>Google Glass</h1>
+		<h2>A revolução do Google está chegando</h2>
+		</hgroup>
+		<img id="icone" src="_imagens/glass-oculos-preto-peq.png"/><!-- foi feito um id para que possamos editar essa imagem com css, o id serve para chamar a tag -->
+	
+	
+	
+<nav id= menu>
+		<h1>Menu Principal</h1>
+		<ol>		
+		<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li> <!--o onmouseover serve para mudar a imagem assim que o mouse for passado em cima da tecla home, o onmouseout serve para que quando o mouse sair de cima do botão home a imagem do óculos volte-->
+		
+		<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+		
+		<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+		<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+		<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="muda('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+		</ol>
+</nav>
+</header>
+
+<form method="post" id="fContato" action="mailto:josuemedeiros011@gmail.com" oninput="calc_total();"><!-- form serve para criar um formulário, method é como os dados seram pegos post é um módo um pouco lendo mas mais seguro de pegar os dados, o action serve para indicar para onde esses dados serão enviados, mailto é a cláusula de email ou seja será enviado para o email, todos os dados digitados pelo usuário será enviado para josuemedeiros011@gmail.com, o problema do mailto é que o usuário vai precisar ter o cliente de email instalado na maquina se não o formulário não funcionará, o html5 não faz o tratamento dos dados do formulário por isso é preciso usar outra linguagem como o php ou o banco de dados, o oninput serve para quando eu digitar qualquer coisa esse vai dispara o método calc_total.-->
+
+	
+	<fieldset id="usuario"><!--Fieldset significa conjunto de campo-->
+	<legend>Identificação do Usuário</legend><!--Significa legenda-->
+		<p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p> <!--input serve para criar caixa de texto, a caixinha de texto terá o tamanho de vinte caracteres, o comodando maxlength informará quantas letras podera ser digitadas, o placeholder serve para colocar uma mensagem dentro da caxinha para ajudar o usuário-->
+		<p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder=" 8 dígitos"/></p><!--O type password serve para que o conteudo que esteja sendo digitado seja ocultado-->
+		<p><label for="cEmail">E-mail:<input type="senha" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="E-mail"></p><!--o type senha serve para que o navegador verifique se o email está escrito no formato certo com os pontos e @-->
+		
+    <fieldset id="sexo"><legend>Sexo</legend>
+
+        <input type="radio" name="sexo" id="cMasc"/><label for="cMasc">Masculino</label> </br><!--O type radio serve para criar um elemento selecionavel, como masculino e feminino faz parte do mesmo fieldset eles tem que ter os nomes iguais se não eles poderam ser clicados ao mesmo tempo e não seram desmarcado caso queira outra opção, label significa etiqueta e serve para que o usuário posso clicar no nome masculino ou feminino e a opção já seja selecionada pois se não tiver essa opção o usuário terá que clicar exatamente em cima da bolinha para selecionar o sexo isso vai gerar um problema bem sério com aplicativos móveis-->
+        <input type="radio" name="sexo" id="cFem"/><label for="cFem">Feminino</label>
+	</fieldset>
+		<p>Data de Nascimento:<input type="date" name="tnasc" id="cnasc"/></p><!-- type date serve para que o formato da caixa de texto seja de data  -->
+	</fieldset>
+	
+<fieldset id="endereco">
+<legend>Endereço do Usuário</legend>
+    <p><label for="cLocra">Logradouro:</label><input type="text" name="tLocra" id="cLocra" size="6" maxlength="80" placeholder="Rua,Ave"></p>
+    <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="9999"/></p><!--type number serve para colocar numero impedindo letras, o min é o valor minimo de números a ser colocado max o valor maximo a ser colocado-->
+	<p><label for="cEst">Estado:</label>
+	<select name="tEst" id="cEst"><!--a 
+    tag select cria caixas combinadas-->
+	
+	<optgroup label="Região Sudeste"><!--optgroup é um grupo de opção dentro do select, então ele cria um pequeno grupo dentro de um grupo maior-->
+	<option value="SP">São Paulo</option><!--option é as opçãos que serão usadas -->
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="MG" selected>Minas Gerais</option><!-- o selected serve para distacar um nome na caixa de selecionamento, o value é o valor que será enviado quando o usuário escolher algumas das opções -->
+	</optgroup>
+	
+	<optgroup label="Região Sul">
+	<option value="PR">Paraná</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="RS">Rio Grande do Sul</option>
+	</optgroup>
+	</select>
+	</p>
+	
+    <p><label for="cCid">Cidade:<input type="text" name="tCid" id="cCid" size="20" maxlength="40" list="cidades" placeholder="Sua Cidade"/></label></p>
+	<datalist id="cidades">
+		<option value="Rio de janeiro"></option><!--O datalist serve igualmente igual on section a diferença é que tem que chamar o datalist no input com a tag list="id" -->
+		<option value="Nova Iguaçu"></option>
+		<option value="Niterói"></option>
+		<option value="Belford roxo"></option>
+	</datalist>
+	
+</fieldset>
+
+<fieldset id="mensagem">
+    <legend>Mensagem do Usuário</legend>
+    <p><label for="cUrg">Grau de Urgência:</label>Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="1"/>Máx</p> <!--O recurso range serve para criar um objeto que rola da esquerda para direita e vice-versa, step serve para você configurar o salto que dará quando for mexer no regulador, o textarea serve para que você possa escreve mensagen mais longas. cols é número de coluna e rows o número de linhas -->
+    <p><label for="cMsg">Mensagem:</label>
+	<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe Aqui Sua Mensagem"></textarea></p>
+</fieldset>
+
+	<fieldset id="pedido">
+    <legend>Quero um Google Glass</legend>
+    <p label for="cped"><input type="checkbox" name="tPed" id="cPed" checked/>Gostaria de adquirir um Google Glass quando disponível</p><!--O checkbox serve para colocar uma caxinha clicavel que coloca um check de confirmação.-->
+    <p><label for="cCor">Cor:</label><input type="color" name="tCor" id="Ccor" value="#0000ff"/></p><!--O type color exibi uma caixa de cor que dar para modifica-lás, o valeus vai ordena que apareça a cor dentro das aspas-->
+    <p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="5"/></p>
+    <p><label for="cTot">Preço Total: R$</label><input type="number" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/></p><!--o parâmetro readonly serve para que a caixa seja disponível apenas para leitura-->
+	</fieldset>
+	<input type="image" src="_imagens/botao-enviar.png"/><!--usamos um arquirvo de imagem para ser nosso botão-->
+</form>
+
+<footer id="rodape"> <!-- serve para colocar rodapé--> 
+<p>Copyright &copy; 2020 - by Josué Medeiros</br> <!--o barra br serve para dar um espaçamento entre os nomes e o &copy; dara uma c numa esfera como marcação-->
+<a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a> |
+ <a href="http://twitter.com/cursoemvideo" target="blank">Twitter</a></p>
+
+</footer>
+</div>
+</body>
+</html>

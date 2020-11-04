@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head lang="pt-br">
+
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+	<link rel="stylesheet" type="text/css" href="_css/specs.css"/>
+	
+</head>
+<script language="javascript" src="_javascript/funcoes.js"></script> <!-- serve para chamar o arquirvo script, language refêrencia a linguagem usada o src serve para chamar o arquirvo-->
+<body>
+		<div id="interface">
+	
+		<header id="cabecalho">
+		<hgroup>
+		<h1>Google Glass</h1>
+		<h2>A revolução do Google está chegando</h2>
+		</hgroup>
+		<img id="icone" src="_imagens/glass-oculos-preto-peq.png"/><!-- foi feito um id para que possamos editar essa imagem com css, o id serve para chamar a tag -->
+	
+	
+	
+<nav id= menu>
+		<h1>Menu Principal</h1>
+		<ol>		
+		<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li> <!--o onmouseover serve para mudar a imagem assim que o mouse for passado em cima da tecla home, o onmouseout serve para que quando o mouse sair de cima do botão home a imagem do óculos volte-->
+		
+		<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+		
+		<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+		<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+		<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="muda('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+		</ol>
+</nav>
+</header>
+
+<section id="corpo-full">
+<article id="noticia-principal"><!--ser criar um artigo no texto do site-->
+<header id="cabecalho-artigo"> <!--Esse header serve para criar e editar o cabeçalho a baixo-->
+<hgroup>	
+
+	<h3>Glass > Especificações</h3>
+	<h1>Raio-X no Google Glass</h1>
+	<h2>By Josué Medeiros</h2>
+	<h3 class="direita">Atualizado em 28/Out/2020</h3>
+	
+</hgroup>
+</header>
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+<section id="conteudo">
+	<img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumap"/> <!--o usemap serve para utilizar a tag map na imagem-->
+	<map name="meumapa">
+	<area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" target="janela"/><!--área serve para especificar a área que será clicada, existe três tipos de shapes os retângulos e círculos que são os mais usados e também temos o poligonal que não é muito usado, o coords é a cordernadas da parte da imagem que será clicada, para isso temos que irmos num editor de texto e pegar as informações de cada área respectivamente, vá a aba de informações e olhe as coordenadas de (X,Y), os números dentro coords são as coordenadas do canto superior esquerdo e inferior direito, o href vai chamar o arquirvo que será usado e o #tela é o id do artigo tela que será chamado no momento que ele for clicado. O target é o alvo ou seja em qual lugar o arquirvo será aberto, sendo assim você pega o name do iframe que se chama janela-->
+	</map>
+	
+	
+	<iframe src="google-glass.html" scrolling="no" src name="janela" id="frame-spec"></iframe> <!--Serve para pegar o arquivo google-glass.html,todo iframe precisa de um name, o scrolling serve para que o scroll não role-->
+</section>
+</article>
+</section>
+<footer id="rodape"> <!-- serve para colocar rodapé--> 
+<p>Copyright &copy; 2013 - by Josué Medeiros</br> <!--o barra br serve para dar um espaçamento entre os nomes e o &copy; dara uma c numa esfera como marcação-->
+<a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a> |
+ <a href="http://twitter.com/cursoemvideo" target="blank">Twitter</a></p>
+
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+ div#tv-radio {
+	 
+	 width: 900px;
+	 height: 580px;
+	 margin: auto;
+	 background: url("../_imagens/radio-tv.png") no-repeat;
+ }
+ 
+ audio#musica{
+	 
+	 display:  block;
+	 position: relative;
+	 left: 574px; /*serve para mover o botão play para a ireita ou esquerda*/
+	 top: 490px;/*serve para mover o botão para cima ou para baixo*/
+	 width: 300px; /*serve para definir o tamanho do play*/
+ }
+ 
+  video#filme{
+	 display:  block;
+	 position: relative;
+	 left: 90px; /*serve para mover o botão play para a direita ou esquerda*/
+	 top: 65px;/*serve para mover o botão para cima ou para baixo*/
+	 width: 440px
+	  
+  }
